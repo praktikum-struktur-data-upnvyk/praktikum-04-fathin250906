@@ -89,20 +89,19 @@ void tutupSemuaTab(CNode*& head) {
 
 // SOAL 1
 bool bukaHalaman(DNode*& head, DNode*& tail, int nomor) {
-     DNode *baru = new DNode;
-    if (head == nullptr)
-    {
-        head = tail = baru;
-        baru->next = head;
-    }
-    else
-    {
+    DNode* baru = new DNode; 
+    baru->data = nomor;
+    baru->prev = nullptr;
+    baru->next = nullptr;
+    if (head == nullptr) {
+        head = baru;
+        tail = baru; 
+    }else { 
         baru->prev = tail;
-        tail->next = baru;
-        tail = baru;
-    }
+        tail->next = baru; 
+        tail = baru; 
+    } 
     return true;
-    return false;
 }
 
 // SOAL 2
