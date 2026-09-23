@@ -102,6 +102,7 @@ bool bukaHalaman(DNode*& head, DNode*& tail, int nomor) {
         tail = baru;
     }
     return true;
+    return false;
 }
 
 // SOAL 2
@@ -113,6 +114,7 @@ int riwayatMundur(DNode* tail, int* keluaran) {
         n++;
     }
     return n;
+    return 0;
 }
 
 // SOAL 3
@@ -165,7 +167,7 @@ bool bukaTab(CNode*& head, int nomor) {
     p->next = baru;
     baru->next = head; 
     return true;
-    return true;
+    return false;
 }
 
 // =============================================================================
